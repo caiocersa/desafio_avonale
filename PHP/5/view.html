@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+</head>
+<body>
+<table id="tabela">
+
+</table >
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+
+        $.getJSON( "randomuser.php").done( function( json ) {
+            console.log(json);
+
+            html = "<tr>";
+            html += "<td>Celular</td>";
+            html += "<td>"+json.results["0"].cell+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>dob/Idade</td>";
+            html += "<td>"+json.results["0"].dob.age+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>dob/Data</td>";
+            html += "<td>"+json.results["0"].dob.date+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Email</td>";
+            html += "<td>"+json.results["0"].email+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>genero</td>";
+            html += "<td>"+json.results["0"].gender+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>id/nome</td>";
+            html += "<td>"+json.results["0"].id.name+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>id/valor</td>";
+            html += "<td>"+json.results["0"].id.name+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>localização/cidade</td>";
+            html += "<td>"+json.results["0"].location.city+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>localização/coordenadas/latiude</td>";
+            html += "<td>"+json.results["0"].location.coordinates.latitude+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>localização/coordenadas/longitude</td>";
+            html += "<td>"+json.results["0"].location.coordinates.longitude+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>localização/CEP</td>";
+            html += "<td>"+json.results["0"].location.postcode+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>localização/Estado</td>";
+            html += "<td>"+json.results["0"].location.state+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>localização/Rua</td>";
+            html += "<td>"+json.results["0"].location.street+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>localização/Fuso Horario/descrição</td>";
+            html += "<td>"+json.results["0"].location.timezone.description+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>localização/Fuso Horario/Offset</td>";
+            html += "<td>"+json.results["0"].location.offset+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Login/md5</td>";
+            html += "<td>"+json.results["0"].login.md5+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Login/Senha</td>";
+            html += "<td>"+json.results["0"].login.password+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Login/Salt</td>";
+            html += "<td>"+json.results["0"].login.salt+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Login/SHA1</td>";
+            html += "<td>"+json.results["0"].login.sha1+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Login/SHA256</td>";
+            html += "<td>"+json.results["0"].login.sha256+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Login/usuario</td>";
+            html += "<td>"+json.results["0"].login.username+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Login/UUID</td>";
+            html += "<td>"+json.results["0"].login.uuid+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Nome/Primeiro</td>";
+            html += "<td>"+json.results["0"].name.frist+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Nome/Ultimo</td>";
+            html += "<td>"+json.results["0"].name.last+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Nome/Titulo</td>";
+            html += "<td>"+json.results["0"].name.title+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>NAT</td>";
+            html += "<td>"+json.results["0"].nat+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Telefone</td>";
+            html += "<td>"+json.results["0"].phone+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Foto/grande</td>";
+            html += "<td>"+json.results["0"].picture.large+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Foto/media</td>";
+            html += "<td>"+json.results["0"].picture.medium+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Foto/thumbnail</td>";
+            html += "<td>"+json.results["0"].picture.thumbnail+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Registro/idade</td>";
+            html += "<td>"+json.results["0"].registered.age+"</td>";
+            html += "</tr>";
+            html += "<tr>";
+            html += "<td>Registro/data</td>";
+            html += "<td>"+json.results["0"].registered.date+"</td>";
+            html += "</tr>";
+            $("#tabela").html(html);
+        });
+
+
+    });
+</script>

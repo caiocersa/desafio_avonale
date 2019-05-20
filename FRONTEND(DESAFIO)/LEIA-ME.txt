@@ -1,0 +1,1 @@
+Rodar em qualquer servidor Apache (xampp,wampp e derivados)
