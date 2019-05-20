@@ -2,6 +2,18 @@ html{
     background-color: #ecf0f1;
 }
 
+
+
+h3{
+    color: #4791e8 !important;
+}
+
+
+main{
+    background-color:  #ecf0f1 ;
+    flex: 1;
+    min-width: 0;
+}
 .app-body {
         display: flex;
         flex-direction: row;
@@ -9,21 +21,12 @@ html{
         overflow-x: hidden;
 }
 
-h3{
-    color: #4791e8 !important;
+.music-container{
+    height: 70%;
 }
 
 .text-gray-600{
     color: #a0aeb4;
-}
-main{
-    background-color:  #ecf0f1 ;
-    flex: 1;
-    min-width: 0;
-}
-
-.music-container{
-    height: 70%;
 }
 
 /* Efeito do Menu */
